@@ -11,9 +11,9 @@ namespace Lumiere.Controllers
 {
     public class AccountController : Controller
     {
-        private readonly UserManager<UserLoginTable> userManager;
-        private readonly SignInManager<UserLoginTable> signInManager;
-        public AccountController(UserManager<UserLoginTable> userManager, SignInManager<UserLoginTable> signInManager)
+        private UserManager<UserTable> userManager;
+        private SignInManager<UserTable> signInManager;
+        public AccountController(UserManager<UserTable> userManager, SignInManager<UserTable> signInManager)
         {
             this.userManager = userManager;
             this.signInManager = signInManager;
@@ -30,7 +30,7 @@ namespace Lumiere.Controllers
         {
             if (ModelState.IsValid)
             {
-                var user = new UserLoginTable { FirstName = registerViewModel.FirstName, LastName = registerViewModel.LastName, Email = registerViewModel.Email};
+                var user = new UserTable { FirstName = registerViewModel.FirstName, LastName = registerViewModel.LastName, UserName = registerViewModel.UserName, Email = registerViewModel.Email};
                 IdentityResult result = await userManager.CreateAsync(user, registerViewModel.Password);
                 if (result.Succeeded)
                 {
@@ -69,6 +69,11 @@ namespace Lumiere.Controllers
                 }
             }
             return View();
+        }
+        public async Task<IActionResult> Logout()
+        {
+            await signInManager.SignOutAsync();
+            return RedirectToAction("index", "home");
         }
     }
 }

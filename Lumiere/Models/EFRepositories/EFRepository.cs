@@ -4,13 +4,13 @@ using Lumiere.Models.Tables;
 
 namespace Lumiere.Models.EFRepositorys
 {
-    public class UserLoginEFRepository : IUserLoginRepository
+    public class UserLoginEFRepository : IUserRepository
     {
         private LumiereDbContext context;
         public UserLoginEFRepository(LumiereDbContext ctx)
         {
             context = ctx;
         }
-        public IQueryable<UserLoginTable> LoginTables => context.LoginTables;
+        public IQueryable<UserTable> UserTables => context.UserTables;
     }
 }

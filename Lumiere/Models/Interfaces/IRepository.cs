@@ -6,8 +6,8 @@ using Lumiere.Models.Tables;
 
 namespace Lumiere.Models.Interfaces
 {
-    public interface IUserLoginRepository
+    public interface IUserRepository
     {
-        IQueryable<UserLoginTable> LoginTables { get; }
+        IQueryable<UserTable> UserTables { get; }
     }
 }

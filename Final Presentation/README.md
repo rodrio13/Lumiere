@@ -14,13 +14,10 @@
 ### 2. Defining Requirements:
 - Requirements were defined to satisfy what I as the developer believed any potential customer would want in
 an application for simply giving back to other and doing good.
-### 3. Designing Product:
-#### Wireframes
-*Cards*
-![image](https://user-images.githubusercontent.com/52425891/68410205-390ce280-013d-11ea-9e5b-6faa433bf468.png)
-### 4. Building Product:
+
+### 3. Building Product:
 - The product was initially being built using MVC with C#, HTML, and CSS.
-### 5. Testing:
+### 4. Testing:
 #### Requirements Traceability
 | __ID__  |       __1__         |          __2__        |         __3__         |      __4__          |
 |---------|---------------------|-----------------------|-----------------------|---------------------|
@@ -47,7 +44,7 @@ an application for simply giving back to other and doing good.
 |Test Casses passing: 71%  
 ###### Review Findings:
 - Sometimes when the websites resizes to mobile the buttons are misplaced
-### 6. Deployment:
+### 5. Deployment:
 https://lumiere.azurewebsites.net/
 
 # Solutions

@@ -35,7 +35,7 @@ an application for simply giving back to other and doing good.
 |---------|--------------------------------------------------------------------|---------|-------------|-------------|
 | 1       | Enter correct URL                                                  | 1       | Passed      | 2019-11-03  |
 | 1.1     | User registers                                                     | 1       | Passed      | 2019-11-03  |
-| 1.2     | User logs in                                                       | 1,1.1   | Passed      | 2019-11-03  |
+| 1.2     | User logs in                                                       | 1       | Passed      | 2019-11-03  |
 | 2       | Create Employee card                                               | 1 - 1.2 | Passed      | 2019-11-03  |
 | 2.1     | Update Employee card                                               | 1, 2    | Passed      | 2019-11-03  |
 | 2.2     | Delete Employee card                                               | 1 - 2   | Fail        | 2019-11-03  |

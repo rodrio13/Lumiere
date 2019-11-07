@@ -11,12 +11,12 @@ namespace Lumiere.Controllers
 {
     public class AccountController : Controller
     {
-        private UserManager<UserTable> userManager;
-        private SignInManager<UserTable> signInManager;
-        public AccountController(UserManager<UserTable> userManager, SignInManager<UserTable> signInManager)
+        private readonly UserManager<UserTable> userManager;
+        private readonly SignInManager<UserTable> signInManager;
+        public AccountController(UserManager<UserTable> _userManager, SignInManager<UserTable> _signInManager)
         {
-            this.userManager = userManager;
-            this.signInManager = signInManager;
+            this.userManager = _userManager;
+            this.signInManager = _signInManager;
         }
 
         [HttpGet]
@@ -30,7 +30,7 @@ namespace Lumiere.Controllers
         {
             if (ModelState.IsValid)
             {
-                var user = new UserTable { /*FirstName = registerViewModel.FirstName, LastName = registerViewModel.LastName, */ UserName = registerViewModel.Email, Email = registerViewModel.Email};
+                var user = new UserTable { UserName = registerViewModel.Email, Email = registerViewModel.Email };
                 IdentityResult result = await userManager.CreateAsync(user, registerViewModel.Password);
                 if (result.Succeeded)
                 {

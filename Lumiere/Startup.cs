@@ -16,6 +16,8 @@ using Microsoft.AspNetCore.Identity;
 using Lumiere.Models.Interfaces;
 using Lumiere.Models.EFRepositorys;
 using Microsoft.AspNetCore.Authentication.Cookies;
+using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc.Authorization;
 
 namespace Lumiere
 {

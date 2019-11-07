@@ -10,8 +10,8 @@ namespace Lumiere.Models.ViewModels
         //[Required(ErrorMessage = "Enter your last name"), StringLength(30)]
         //[Display(Name = "Last Name")]
         //public string LastName { get; set; }
-        [Display(Name = "Username")]
-        public string UserName { get; set; }
+        //[Display(Name = "Username")]
+        //public string UserName { get; set; }
         [DataType(DataType.EmailAddress)]
         [Required(ErrorMessage = "Enter your email"), StringLength(30)]
         public string Email { get; set; }

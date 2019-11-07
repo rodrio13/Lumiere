@@ -4,12 +4,12 @@ namespace Lumiere.Models.ViewModels
 {
     public class RegisterViewModel
     {
-        [Required(ErrorMessage = "Enter your first name"), StringLength(30)]
-        [Display(Name = "First Name")]
-        public string FirstName { get; set; }
-        [Required(ErrorMessage = "Enter your last name"), StringLength(30)]
-        [Display(Name = "Last Name")]
-        public string LastName { get; set; }
+        //[Required(ErrorMessage = "Enter your first name"), StringLength(30)]
+        //[Display(Name = "First Name")]
+        //public string FirstName { get; set; }
+        //[Required(ErrorMessage = "Enter your last name"), StringLength(30)]
+        //[Display(Name = "Last Name")]
+        //public string LastName { get; set; }
         [Display(Name = "Username")]
         public string UserName { get; set; }
         [DataType(DataType.EmailAddress)]

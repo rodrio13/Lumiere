@@ -37,7 +37,7 @@ namespace Lumiere
                 options.CheckConsentNeeded = context => true;
                 options.MinimumSameSitePolicy = SameSiteMode.None;
             });
-            services.AddDbContextPool<LumiereDbContext>(
+            services.AddDbContext<LumiereDbContext>(
                 options => options.UseSqlServer(Config.GetConnectionString("UserDBConnection")));
             services.AddIdentity<UserTable, IdentityRole>(options => options.User.RequireUniqueEmail = true)
                 .AddEntityFrameworkStores<LumiereDbContext>()

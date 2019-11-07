@@ -30,7 +30,7 @@ namespace Lumiere.Controllers
         {
             if (ModelState.IsValid)
             {
-                var user = new UserTable { FirstName = registerViewModel.FirstName, LastName = registerViewModel.LastName, UserName = registerViewModel.UserName, Email = registerViewModel.Email};
+                var user = new UserTable { /*FirstName = registerViewModel.FirstName, LastName = registerViewModel.LastName, */ UserName = registerViewModel.UserName, Email = registerViewModel.Email};
                 IdentityResult result = await userManager.CreateAsync(user, registerViewModel.Password);
                 if (result.Succeeded)
                 {
